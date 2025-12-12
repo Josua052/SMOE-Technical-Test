@@ -22,21 +22,6 @@ const MaterialRequestForm = () => {
   const navigate = useNavigate();
   const isEdit = Boolean(params.id);
 
-  const [header, setHeader] = useState({
-    requestNo: "",
-    requestDate: "",
-    requester: "",
-    department: "",
-    remarks: "",
-  });
-
-  const [materials, setMaterials] = useState([
-    { ...EMPTY_MATERIAL_ROW },
-  ]);
-
-  const [loading, setLoading] = useState(isEdit);
-  const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState("");
 
   useEffect(() => {
     const loadRequest = async () => {
